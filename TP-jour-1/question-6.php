@@ -2,10 +2,17 @@
 
 <?php 
 
+$depart = 1;
+$arrivee = 5;
+$somme = 0 ;
 
-$n = 5;
+while ($depart <= $arrivee) {
 
+    $somme = $somme +  $depart;
+    $depart++;
 
+}
 
+echo $somme . "</br>";
 
 ?>
