@@ -11,4 +11,7 @@ foreach($valeurs as $value){
 
 echo "le plus petit nombre est : " . $result;
 
+//phpinfo();
+
+
 ?>
