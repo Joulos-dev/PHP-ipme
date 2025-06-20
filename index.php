@@ -33,6 +33,28 @@ foreach($tableau as $item) {
     echo $item;
 }
 
+$array = [2, 5, 5, 10];
+//utiliser break pour sortir de la boucle
+foreach ($array as $value) {
+    if ($value === 5) {
+        break;
+    }
+}
+// //die permet d'arreter complement l'execution de PHP des qu'il passe dedans
+//$array = [2, 5, 5, 10];
+//foreach ($array as $value) {
+//    var_dump($value);
+//    die;
+//}
+
+// // Sert à avoir des infos sur la requetes en cours (ip du user, le navigateur etc)...
+//var_dump($_SERVER);
 
 
-?>
+
+var_dump($_GET);
+if(isset($_GET['name']) && isset($_GET['toto'])){
+    echo $_GET['name'];
+}
+
+
