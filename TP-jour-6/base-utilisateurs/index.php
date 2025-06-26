@@ -1,12 +1,11 @@
 <?php include 'header.php'; ?>
 
 
-
 <?php
 
 include 'pdo.php';
 
-var_dump($_SESSION);
+//var_dump($_SESSION);
 
 if(isset($_SESSION['user'])){
     include 'menu-deco.php';
@@ -15,6 +14,12 @@ if(isset($_SESSION['user'])){
 }
 
 ?>
+
+<h1> Base de données inutile  </h1>
+
+<?php if(isset($_SESSION['user'])): ?>
+    <p> bienvenue <?php echo $_SESSION['user'] ?>  ! </p>
+<?php endif ; ?>
 
 <?php if(isset($_GET['inscription'])): ?>
     <script>
@@ -36,10 +41,4 @@ if(isset($_SESSION['user'])){
     </script>
 <?php endif ; ?>
 
-
-
 <?php include 'footer.php';
-
-
-//$verify = password_verify('toto', '$2y$10$yED0seKQTz6TVAIB0W7MBOOL0ojBtd94CRV835sEOA3V/Wxrm.dpm');
-//var_dump($verify);
