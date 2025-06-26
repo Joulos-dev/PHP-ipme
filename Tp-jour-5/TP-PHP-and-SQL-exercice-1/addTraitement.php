@@ -13,7 +13,6 @@ if(
     $_GET['rating'] >= 0 ) {
 
 
-
     //autre requete tu recupere le jeu par son id pour éviter les doublons dans la base de données
 
 

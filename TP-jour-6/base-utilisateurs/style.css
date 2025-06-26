@@ -76,7 +76,13 @@ body {
 /* Better link color, disable old visited */
 a,
 a:visited {
-    color: light-dark(royalblue, dodgerblue);
+    text-decoration: none;
+    border:none;
+    background-color: burlywood;
+    color: black;
+    border-radius:10px;
+    padding-inline: 15px;
+    padding-block:10px;
 }
 
 /* Less aggressive background colors */
@@ -145,3 +151,12 @@ table {
     margin: auto;
 }
 
+form {
+    display: inline-flex;
+    flex-direction: column;
+    margin:3rem;
+}
+
+label {
+    margin-top: 1rem;
+}
