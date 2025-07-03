@@ -1,0 +1,28 @@
+services:
+  mysql:
+    image: mysql
+    volumes:
+      - C:\Users\IPME_04\Desktop\PHP-ipme\TP-jour-6\base-utilisateurs\mysql:/var/lib/mysql
+    environment:
+     MYSQL_ROOT_PASSWORD: mdp
+
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - '8001:80'
+    environment:
+      - PMA_HOST=mysql
+
+  php:
+    image: php:8.4-apache
+    ports:
+      - '80:80'
+    volumes:
+      - C:\Users\IPME_04\Desktop\PHP-ipme\TP-jour-6\base-utilisateurs:/var/www/html/
+    environment:
+      DB_HOST: mysql
+      DB_USER: root
+      DB_PASSWORD: mdp
+      DB_NAME: utilisateur
+
+

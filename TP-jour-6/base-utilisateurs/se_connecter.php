@@ -1,6 +1,11 @@
-<?php include 'header.php'; ?>
+<?php
+session_start();
 
-<?php include 'pdo.php'; ?>
+include 'header.php';
+
+include 'pdo.php';
+
+?>
 
 <div>
     <a href="index.php">Accueil</a>

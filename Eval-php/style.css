@@ -1,0 +1,174 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    font-family: system-ui;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas {
+    display: block;
+    max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/* Lighter colors */
+body {
+    color: light-dark(#3e3a3a, #eee);
+    background-color: light-dark(#fff, #222);
+}
+
+/* Add offset to separate 1px border with outline */
+* {
+    outline-offset: 1px;
+}
+
+/* Better link color, disable old visited */
+a,
+a:visited {
+    text-decoration: none;
+    border:none;
+    background-color: burlywood;
+    color: black;
+    border-radius:10px;
+    padding-inline: 15px;
+    padding-block:10px;
+}
+
+/* Less aggressive background colors */
+select,
+input,
+button {
+    background-color: light-dark(#2221, #fff1);
+}
+select:active,
+button:active {
+    background-color: light-dark(#2222, #fff2);
+}
+
+/* Use modern monospace fonts on Windows & MacOS */
+pre,
+code {
+    font-family: Consolas, Monaco, monospace;
+}
+
+/* Less aggressive borders */
+input,
+button,
+textarea,
+select,
+fieldset,
+th,
+td,
+hr {
+    border-radius: 3px;
+    border: 1px solid light-dark(#ccc, #888);
+}
+
+/* Improved padding & margin on user action elements */
+input,
+select,
+textarea {
+    padding: 0.2rem;
+    padding-inline-start: 0.5rem;
+}
+button {
+    padding: 0.2rem;
+    padding-inline: 0.5rem;
+}
+ul,
+ol {
+    padding-inline-start: 1.6rem;
+}
+fieldset {
+    margin-block: 1rem;
+}
+legend {
+    padding-inline: 0.5rem;
+}
+td {
+    padding-block: 0.2rem;
+    padding-inline: 0.5rem;
+}
+
+/* Single border by default */
+table {
+    border-collapse: collapse;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+form {
+    display: inline-flex;
+    flex-direction: column;
+    margin:3rem;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+.center {
+    text-align: center;
+    margin: 2rem;
+}
+
+.accueil {
+    margin-top: 1rem;
+}
